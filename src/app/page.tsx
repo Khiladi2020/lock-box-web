@@ -1,18 +1,18 @@
 import styles from "./page.module.css";
-import PasswordList from "../../Components/passwordList";
+import PasswordList from "./passwordList/page";
 import MasterPassword from "./masterPassword/page";
- 
+import {Box } from "@mui/material";
  
 
 export default function Home() {
 	return (
 		
-			<div className={styles.page}>
+			<Box className={styles.page}>
 				<h1>Lock Box Web App</h1>
 
-				{/* <PasswordList /> */}
-			 <MasterPassword/> 
-			</div>
+				<PasswordList />
+			 {/* <MasterPassword/>  */}
+			</Box>
 		 
 	);
 }

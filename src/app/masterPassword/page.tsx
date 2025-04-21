@@ -7,13 +7,13 @@ import InputLabel from '@mui/material/InputLabel';
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Box } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 
 
 export default function MasterPassword() {
   return (
-    <div className="master">
-      <h1>Enter Master Password</h1>
+    <Box className="master">
+      <Typography variant="h4" component="h1">Enter Master Password</Typography>
     
 
     
@@ -23,19 +23,6 @@ export default function MasterPassword() {
             id="outlined-adornment-password"
             //type={showPassword ? 'text' : 'password'}
             type = "password"
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  //aria-label= {showPassword ? 'hide the password' : 'display the password' }
-                  //onClick={handleClickShowPassword}
-                  //onMouseDown={handleMouseDownPassword}
-                  //onMouseUp={handleMouseUpPassword}
-                  //edge="end"
-                >
-                  {1 ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
             label="Password"
           />
         </FormControl>
@@ -44,8 +31,9 @@ export default function MasterPassword() {
         <Button fullWidth  variant="outlined">Confirm</Button> 
 
        </Box>
-    </div>
+    </Box>
   );
 }
+
 
 
